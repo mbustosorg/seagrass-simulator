@@ -18,6 +18,7 @@
 *.xcarchive
 xcshareddata
 *~
+bin/furSwarmSimulatorDebug.app
  
 #####
 # OS X temporary files that should never be committed
