@@ -12,6 +12,8 @@ const uint8_t memberType = 0x01; // Vest
 const uint8_t memberType = 0x02; // Hat
 #elif FS_TOWER
 const uint8_t memberType = 0x03; // Tower
+#elif FS_TOWN_CENTER
+const uint8_t memberType = 0x04; // Town Center
 #endif
 
 // Heartbeat message layout
@@ -69,6 +71,8 @@ void testApp::setup(){
     int numberOfTowers = 1;
 #elif FS_TOWER
     int numberOfTowers = 10;
+#elif FS_TOWN_CENTER
+    int numberOfTowers = 8;
 #else
     int numberOfTowers = 1;
 #endif
@@ -79,9 +83,9 @@ void testApp::setup(){
         platforms[i]->FS_BREATHE_MULTIPLIER = 50.0;
 	}
     // Speed, Red, Green, Blue, Intensity
-    //uint8_t sourceData[] = {FS_ID_ANIMATE_1, 120, 130, 100, 130, 240, 0};
+    uint8_t sourceData[] = {FS_ID_ANIMATE_1, 120, 130, 100, 130, 240, 0};
     //uint8_t sourceData[] = {FS_ID_BROKEN, 120, 130, 100, 130, 240, 0};
-    uint8_t sourceData[] = {FS_ID_SEARCHING_EYE, 10, 250, 100, 130, 250, 0};
+    //uint8_t sourceData[] = {FS_ID_SEARCHING_EYE, 10, 250, 100, 130, 250, 0};
     //uint8_t sourceData[] = {FS_ID_RAINBOW_CHASE, 120, 130, 100, 130, 240, 0};
     //uint8_t sourceData[] = {FS_ID_PONG, 60, 1, numberOfTowers, 130, 20};
     memcpy (data, sourceData, 7);
@@ -131,7 +135,9 @@ void testApp::draw(){
     float value = 0;
     for (int i = 0; i < LED_COUNT; i++) {
         for(j = 0; j < platforms.size(); j++){
-            ofSetColor(platforms[j]->nonEmbedRed[i], platforms[j]->nonEmbedGreen[i], platforms[j]->nonEmbedBlue[i]);
+            ofSetColor(platforms[j]->leds.nonEmbedRed[i],
+                       platforms[j]->leds.nonEmbedGreen[i],
+                       platforms[j]->leds.nonEmbedBlue[i]);
 #ifdef FS_TOWER_EYE
             int boxSize = 25;
             float boxMult = 2.0;
@@ -166,9 +172,9 @@ void testApp::draw(){
                 ofCircle(leftX + (i - 95) % 5 * increment + offset - increment, (i - 95) / 5 * increment + increment * 12 + 30, boxSize / 2);
                 ofCircle(rightX - (i - 95) % 5 * increment + offset + increment, (i - 95) / 5 * increment + increment * 12 + 30, boxSize / 2);
             }
-#elif defined FS_TOWER || defined FS_HAT
+#elif defined FS_TOWER || defined FS_HAT || defined FS_TOWN_CENTER
             int boxSize = 13;
-            ofRect(80 * j + 20, (LED_COUNT - i) * boxSize, boxSize, boxSize);
+            ofDrawRectangle(80 * j + 20, (LED_COUNT - i) * boxSize, boxSize, boxSize);
             ofSetHexColor(0xA0A0A0);
 #else
             int boxSize = 40;
@@ -336,8 +342,8 @@ void testApp::draw(){
         k++;
 	}
     // GPS mapped output
-#if defined FS_TOWER && !defined FS_TOWER_EYE
-    ofRect(850, 400, 320 / 1.5, 480 / 1.5);
+#if ((defined FS_TOWER) || (defined FS_TOWN_CENTER)) && !defined FS_TOWER_EYE
+    ofDrawRectangle(850, 400, 320 / 1.5, 480 / 1.5);
 #endif
     drawGPSdata();
 }
@@ -372,7 +378,7 @@ void testApp::drawGPSdata() {
 	for(int i = 0; i < platforms.size(); i++){
         float x = 850.0 + 320.0 * (float)(platforms[i]->longitude - minLongitude) / lonRange / 1.5;
         float y = 400.0 + 480.0 * (float)(platforms[i]->latitude - minLatitude) / latRange / 1.5;
-        ofEllipse(x, y, 20, 20);
+        ofDrawEllipse(x, y, 20, 20);
     }
 #endif
 }

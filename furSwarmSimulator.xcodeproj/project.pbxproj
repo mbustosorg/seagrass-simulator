@@ -17,11 +17,36 @@
 		2208F4961C4600B1002D9602 /* XBee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4941C4600B1002D9602 /* XBee.cpp */; };
 		2208F4991C460113002D9602 /* furSwarmPatterns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4971C460113002D9602 /* furSwarmPatterns.cpp */; };
 		2208F49C1C46016D002D9602 /* embeddedInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F49A1C46016D002D9602 /* embeddedInterface.cpp */; };
+		220C422E1C8C032100B195D0 /* opc_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 220C422C1C8C032100B195D0 /* opc_client.cpp */; };
+		220C422F1C8C032100B195D0 /* opc_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 220C422C1C8C032100B195D0 /* opc_client.cpp */; };
+		220C42321C8D1B7500B195D0 /* poofer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 220C42301C8D1B7500B195D0 /* poofer.cpp */; };
+		220C42331C8D1B7500B195D0 /* poofer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 220C42301C8D1B7500B195D0 /* poofer.cpp */; };
+		225AF5871C7ABAC7000139B7 /* ledDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225AF5851C7ABAC7000139B7 /* ledDriver.cpp */; };
+		225AF5881C7ABAC7000139B7 /* ledDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 225AF5851C7ABAC7000139B7 /* ledDriver.cpp */; };
+		22A1E0DB1C78CB0600879454 /* XBee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4941C4600B1002D9602 /* XBee.cpp */; };
+		22A1E0DC1C78CB0600879454 /* adxl335.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4831C460059002D9602 /* adxl335.cpp */; };
+		22A1E0DD1C78CB0600879454 /* accelerometer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4811C460059002D9602 /* accelerometer.cpp */; };
+		22A1E0DE1C78CB0600879454 /* furSwarmPatterns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4971C460113002D9602 /* furSwarmPatterns.cpp */; };
+		22A1E0DF1C78CB0600879454 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		22A1E0E01C78CB0600879454 /* embeddedInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F49A1C46016D002D9602 /* embeddedInterface.cpp */; };
+		22A1E0E11C78CB0600879454 /* towerBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4891C460059002D9602 /* towerBall.cpp */; };
+		22A1E0E21C78CB0600879454 /* towerPatterns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F48B1C460059002D9602 /* towerPatterns.cpp */; };
+		22A1E0E31C78CB0600879454 /* colorUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4851C460059002D9602 /* colorUtilities.cpp */; };
+		22A1E0E41C78CB0600879454 /* towerAnimations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F4871C460059002D9602 /* towerAnimations.cpp */; };
+		22A1E0E51C78CB0600879454 /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2208F47E1C45FFF9002D9602 /* testApp.cpp */; };
+		22A1E0E71C78CB0600879454 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		22A1E0D91C78CB0600879454 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
 		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
@@ -39,6 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		22A1E0E91C78CB0600879454 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,8 +105,16 @@
 		2208F4981C460113002D9602 /* furSwarmPatterns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = furSwarmPatterns.h; path = ../../../../../../furSwarmMember/src/furSwarmPatterns.h; sourceTree = "<group>"; };
 		2208F49A1C46016D002D9602 /* embeddedInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = embeddedInterface.cpp; path = ../../../../../../furSwarmMember/src/embeddedInterface.cpp; sourceTree = "<group>"; };
 		2208F49B1C46016D002D9602 /* embeddedInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = embeddedInterface.h; path = ../../../../../../furSwarmMember/src/embeddedInterface.h; sourceTree = "<group>"; };
+		220C422C1C8C032100B195D0 /* opc_client.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = opc_client.cpp; path = ../../../../../../furSwarmMember/src/opc/opc_client.cpp; sourceTree = "<group>"; };
+		220C422D1C8C032100B195D0 /* opc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = opc.h; path = ../../../../../../furSwarmMember/src/opc/opc.h; sourceTree = "<group>"; };
+		220C42301C8D1B7500B195D0 /* poofer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = poofer.cpp; path = ../../../../../../furSwarmMember/src/poofer.cpp; sourceTree = "<group>"; };
+		220C42311C8D1B7500B195D0 /* poofer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = poofer.h; path = ../../../../../../furSwarmMember/src/poofer.h; sourceTree = "<group>"; };
+		225AF5851C7ABAC7000139B7 /* ledDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ledDriver.cpp; path = ../../../../../../furSwarmMember/src/ledDriver.cpp; sourceTree = "<group>"; };
+		225AF5861C7ABAC7000139B7 /* ledDriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ledDriver.h; path = ../../../../../../furSwarmMember/src/ledDriver.h; sourceTree = "<group>"; };
+		22A1E0ED1C78CB0600879454 /* FS_TOWN_CENTER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FS_TOWN_CENTER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A1E0EE1C78CB0700879454 /* FS_TOWER copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FS_TOWER copy-Info.plist"; path = "/Users/mauricio/Documents/development/openFrameworks/of_v0.9.0_osx_release/apps/myApps/furSwarmSimulator/FS_TOWER copy-Info.plist"; sourceTree = "<absolute>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
-		E4B69B5B0A3A1756003C02F2 /* furSwarmSimulatorDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = furSwarmSimulatorDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* FS_TOWERDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FS_TOWERDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
@@ -80,6 +122,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		22A1E0E61C78CB0600879454 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A1E0E71C78CB0600879454 /* openFrameworksDebug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,13 +182,21 @@
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,
-				E4B69B5B0A3A1756003C02F2 /* furSwarmSimulatorDebug.app */,
+				E4B69B5B0A3A1756003C02F2 /* FS_TOWERDebug.app */,
+				22A1E0ED1C78CB0600879454 /* FS_TOWN_CENTER.app */,
+				22A1E0EE1C78CB0700879454 /* FS_TOWER copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				220C42301C8D1B7500B195D0 /* poofer.cpp */,
+				220C42311C8D1B7500B195D0 /* poofer.h */,
+				220C422C1C8C032100B195D0 /* opc_client.cpp */,
+				220C422D1C8C032100B195D0 /* opc.h */,
+				225AF5851C7ABAC7000139B7 /* ledDriver.cpp */,
+				225AF5861C7ABAC7000139B7 /* ledDriver.h */,
 				2208F4811C460059002D9602 /* accelerometer.cpp */,
 				2208F4821C460059002D9602 /* accelerometer.h */,
 				2208F4831C460059002D9602 /* adxl335.cpp */,
@@ -175,9 +233,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* furSwarmSimulator */ = {
+		22A1E0D71C78CB0600879454 /* FS_TOWN_CENTER */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "furSwarmSimulator" */;
+			buildConfigurationList = 22A1E0EA1C78CB0600879454 /* Build configuration list for PBXNativeTarget "FS_TOWN_CENTER" */;
+			buildPhases = (
+				22A1E0DA1C78CB0600879454 /* Sources */,
+				22A1E0E61C78CB0600879454 /* Frameworks */,
+				22A1E0E81C78CB0600879454 /* ShellScript */,
+				22A1E0E91C78CB0600879454 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22A1E0D81C78CB0600879454 /* PBXTargetDependency */,
+			);
+			name = FS_TOWN_CENTER;
+			productName = myOFApp;
+			productReference = 22A1E0ED1C78CB0600879454 /* FS_TOWN_CENTER.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E4B69B5A0A3A1756003C02F2 /* FS_TOWER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "FS_TOWER" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -189,9 +266,9 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = furSwarmSimulator;
+			name = FS_TOWER;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* furSwarmSimulatorDebug.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* FS_TOWERDebug.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -223,7 +300,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* furSwarmSimulator */,
+				E4B69B5A0A3A1756003C02F2 /* FS_TOWER */,
+				22A1E0D71C78CB0600879454 /* FS_TOWN_CENTER */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +317,19 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		22A1E0E81C78CB0600879454 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rsync -aved ../../../libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\nrsync -aved ../../../libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
+		};
 		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -255,6 +346,27 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		22A1E0DA1C78CB0600879454 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A1E0DB1C78CB0600879454 /* XBee.cpp in Sources */,
+				22A1E0DC1C78CB0600879454 /* adxl335.cpp in Sources */,
+				22A1E0DD1C78CB0600879454 /* accelerometer.cpp in Sources */,
+				22A1E0DE1C78CB0600879454 /* furSwarmPatterns.cpp in Sources */,
+				220C42331C8D1B7500B195D0 /* poofer.cpp in Sources */,
+				22A1E0DF1C78CB0600879454 /* main.cpp in Sources */,
+				22A1E0E01C78CB0600879454 /* embeddedInterface.cpp in Sources */,
+				22A1E0E11C78CB0600879454 /* towerBall.cpp in Sources */,
+				220C422F1C8C032100B195D0 /* opc_client.cpp in Sources */,
+				22A1E0E21C78CB0600879454 /* towerPatterns.cpp in Sources */,
+				22A1E0E31C78CB0600879454 /* colorUtilities.cpp in Sources */,
+				22A1E0E41C78CB0600879454 /* towerAnimations.cpp in Sources */,
+				22A1E0E51C78CB0600879454 /* testApp.cpp in Sources */,
+				225AF5881C7ABAC7000139B7 /* ledDriver.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4B69B580A3A1756003C02F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,19 +375,27 @@
 				2208F48E1C460059002D9602 /* adxl335.cpp in Sources */,
 				2208F48D1C460059002D9602 /* accelerometer.cpp in Sources */,
 				2208F4991C460113002D9602 /* furSwarmPatterns.cpp in Sources */,
+				220C42321C8D1B7500B195D0 /* poofer.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				2208F49C1C46016D002D9602 /* embeddedInterface.cpp in Sources */,
 				2208F4911C460059002D9602 /* towerBall.cpp in Sources */,
+				220C422E1C8C032100B195D0 /* opc_client.cpp in Sources */,
 				2208F4921C460059002D9602 /* towerPatterns.cpp in Sources */,
 				2208F48F1C460059002D9602 /* colorUtilities.cpp in Sources */,
 				2208F4901C460059002D9602 /* towerAnimations.cpp in Sources */,
 				2208F4801C45FFF9002D9602 /* testApp.cpp in Sources */,
+				225AF5871C7ABAC7000139B7 /* ledDriver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		22A1E0D81C78CB0600879454 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = 22A1E0D91C78CB0600879454 /* PBXContainerItemProxy */;
+		};
 		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = openFrameworks;
@@ -284,6 +404,76 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		22A1E0EB1C78CB0600879454 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "FS_TOWER copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+					"-DFS_TOWN_CENTER",
+					"-DNOT_EMBEDDED",
+					"-DNOT_OPC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		22A1E0EC1C78CB0600879454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../../libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "FS_TOWER copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+					"-DFS_TOWN_CENTER",
+					"-DNOT_EMBEDDED",
+					"-DNOT_OPC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
 		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
@@ -378,6 +568,7 @@
 					"-mtune=native",
 					"-DNOT_EMBEDDED",
 					"-DFS_TOWER",
+					"-DNOT_OPC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
@@ -411,6 +602,7 @@
 					"-mtune=native",
 					"-DNOT_EMBEDDED",
 					"-DFS_TOWER",
+					"-DNOT_OPC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -421,6 +613,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		22A1E0EA1C78CB0600879454 /* Build configuration list for PBXNativeTarget "FS_TOWN_CENTER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A1E0EB1C78CB0600879454 /* Debug */,
+				22A1E0EC1C78CB0600879454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "furSwarmSimulator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -430,7 +631,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "furSwarmSimulator" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "FS_TOWER" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,
