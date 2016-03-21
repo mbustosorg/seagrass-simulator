@@ -146,31 +146,31 @@ void testApp::draw(){
             int leftX = 500;
             int x, y, increment = boxSize * boxMult;
             if (i < 4) {
-                ofCircle(leftX + i * increment + offset, 30, boxSize / 2);
-                ofCircle(rightX - i * increment + offset, 30, boxSize / 2);
+                ofDrawEllipse(leftX + i * increment + offset, 30, boxSize / 2, boxSize / 2);
+                ofDrawEllipse(rightX - i * increment + offset, 30, boxSize / 2, boxSize / 2);
             } else if (i < 11) {
-                ofCircle(leftX + (10 - i) * increment + offset - increment * 2, (i - 4) / 7 * increment + increment + 30, boxSize / 2);
-                ofCircle(rightX - (10 - i) % 7 * increment + offset + increment * 2, (i - 4) / 7 * increment + increment + 30, boxSize / 2);
+                ofDrawEllipse(leftX + (10 - i) * increment + offset - increment * 2, (i - 4) / 7 * increment + increment + 30, boxSize / 2, boxSize / 2);
+                ofDrawEllipse(rightX - (10 - i) % 7 * increment + offset + increment * 2, (i - 4) / 7 * increment + increment + 30, boxSize / 2, boxSize / 2);
             } else if (i < 18) {
-                ofCircle(leftX + (i - 4) % 7 * increment + offset - increment * 2, (i - 4) / 7 * increment + increment + 30, boxSize / 2);
-                ofCircle(rightX - (i - 4) % 7 * increment + offset + increment * 2, (i - 4) / 7 * increment + increment + 30, boxSize / 2);
+                ofDrawEllipse(leftX + (i - 4) % 7 * increment + offset - increment * 2, (i - 4) / 7 * increment + increment + 30, boxSize / 2, boxSize / 2);
+                ofDrawEllipse(rightX - (i - 4) % 7 * increment + offset + increment * 2, (i - 4) / 7 * increment + increment + 30, boxSize / 2, boxSize / 2);
             } else if (i < 81) {
                 if ((i - 18) / 9 % 2 == 0) {
-                    ofCircle(leftX + (18 - i) % 9 * increment + offset + increment * 5, (i - 18) / 9 * increment + increment * 3 + 30, boxSize / 2);
-                    ofCircle(rightX - (18 - i) % 9 * increment + offset - increment * 5, (i - 18) / 9 * increment + increment * 3 + 30, boxSize / 2);
+                    ofDrawEllipse(leftX + (18 - i) % 9 * increment + offset + increment * 5, (i - 18) / 9 * increment + increment * 3 + 30, boxSize / 2, boxSize / 2);
+                    ofDrawEllipse(rightX - (18 - i) % 9 * increment + offset - increment * 5, (i - 18) / 9 * increment + increment * 3 + 30, boxSize / 2, boxSize / 2);
                 } else {
-                    ofCircle(leftX + (i - 18) % 9 * increment + offset - increment * 3, (i - 18) / 9 * increment + increment * 3 + 30, boxSize / 2);
-                    ofCircle(rightX - (i - 18) % 9 * increment + offset + increment * 3, (i - 18) / 9 * increment + increment * 3 + 30, boxSize / 2);
+                    ofDrawEllipse(leftX + (i - 18) % 9 * increment + offset - increment * 3, (i - 18) / 9 * increment + increment * 3 + 30, boxSize / 2, boxSize / 2);
+                    ofDrawEllipse(rightX - (i - 18) % 9 * increment + offset + increment * 3, (i - 18) / 9 * increment + increment * 3 + 30, boxSize / 2, boxSize / 2);
                 }
             } else if (i < 88) {
-                ofCircle(leftX + (i - 81) % 7 * increment + offset - increment * 2, (i - 81) / 7 * increment + increment * 10 + 30, boxSize / 2);
-                ofCircle(rightX - (i - 81) % 7 * increment + offset + increment * 2, (i - 81) / 7 * increment + increment * 10 + 30, boxSize / 2);
+                ofDrawEllipse(leftX + (i - 81) % 7 * increment + offset - increment * 2, (i - 81) / 7 * increment + increment * 10 + 30, boxSize / 2, boxSize / 2);
+                ofDrawEllipse(rightX - (i - 81) % 7 * increment + offset + increment * 2, (i - 81) / 7 * increment + increment * 10 + 30, boxSize / 2, boxSize / 2);
             } else if (i < 95) {
-                ofCircle(leftX + (81 - i) % 7 * increment + offset + increment * 4, (i - 81) / 7 * increment + increment * 10 + 30, boxSize / 2);
-                ofCircle(rightX - (81 - i) % 7 * increment + offset - increment * 4, (i - 81) / 7 * increment + increment * 10 + 30, boxSize / 2);
+                ofDrawEllipse(leftX + (81 - i) % 7 * increment + offset + increment * 4, (i - 81) / 7 * increment + increment * 10 + 30, boxSize / 2, boxSize / 2);
+                ofDrawEllipse(rightX - (81 - i) % 7 * increment + offset - increment * 4, (i - 81) / 7 * increment + increment * 10 + 30, boxSize / 2, boxSize / 2);
             } else {
-                ofCircle(leftX + (i - 95) % 5 * increment + offset - increment, (i - 95) / 5 * increment + increment * 12 + 30, boxSize / 2);
-                ofCircle(rightX - (i - 95) % 5 * increment + offset + increment, (i - 95) / 5 * increment + increment * 12 + 30, boxSize / 2);
+                ofDrawEllipse(leftX + (i - 95) % 5 * increment + offset - increment, (i - 95) / 5 * increment + increment * 12 + 30, boxSize / 2, boxSize / 2);
+                ofDrawEllipse(rightX - (i - 95) % 5 * increment + offset + increment, (i - 95) / 5 * increment + increment * 12 + 30, boxSize / 2, boxSize / 2);
             }
 #elif defined FS_TOWER || defined FS_HAT || defined FS_TOWN_CENTER
             int boxSize = 13;
