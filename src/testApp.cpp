@@ -14,6 +14,14 @@ const uint8_t memberType = 0x02; // Hat
 const uint8_t memberType = 0x03; // Tower
 #elif FS_TOWN_CENTER
 const uint8_t memberType = 0x04; // Town Center
+#elif FS_TOWER_EYE
+const uint8_t memberType = 0x05; // Tower Eye
+#elif FS_DRESS
+const uint8_t memberType = 0x06; // Dress
+#elif FS_WINDFLOWERS
+const uint8_t memberType = 0x07; // Windflowers
+#elif FS_REEDS
+const uint8_t memberType = 0x08; // Reeds
 #endif
 
 // Heartbeat message layout
@@ -131,6 +139,7 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
+    ofBackground(40, 40, 40);
     int j;
     float value = 0;
     for (int i = 0; i < LED_COUNT; i++) {
@@ -176,7 +185,68 @@ void testApp::draw(){
             int boxSize = 13;
             ofDrawRectangle(80 * j + 20, (LED_COUNT - i) * boxSize, boxSize, boxSize);
             ofSetHexColor(0xA0A0A0);
-#else
+#elif defined FS_DRESS
+            int boxSize = 13;
+            int rowInterval = 80;
+            int rowStart = 20;
+            int columnInterval = 60;
+            if (i < 4) {
+                ofDrawEllipse(150 + columnInterval * i, rowStart, boxSize, boxSize);
+            } else if (i < 8) {
+                ofDrawEllipse(150 + columnInterval * (i - 4), rowStart + rowInterval * 1, boxSize, boxSize);
+            } else if (i < 13) {
+                ofDrawEllipse(150 - columnInterval / 2 + columnInterval * (i - 8), rowStart + rowInterval * 2, boxSize, boxSize);
+            } else if (i < 18) {
+                ofDrawEllipse(150 - columnInterval / 2 + columnInterval * (i - 13), rowStart + rowInterval * 3, boxSize, boxSize);
+            } else if (i < 23) {
+                ofDrawEllipse(150 - columnInterval / 2 + columnInterval * (i - 18), rowStart + rowInterval * 4, boxSize, boxSize);
+            } else if (i < 29) {
+                ofDrawEllipse(150 - columnInterval + columnInterval * (i - 23), rowStart + rowInterval * 5, boxSize, boxSize);
+            } else if (i < 36) {
+                ofDrawEllipse(150 - columnInterval * 1.5 + columnInterval * (i - 29), rowStart + rowInterval * 6, boxSize, boxSize);
+            } else if (i < 44) {
+                ofDrawEllipse(150 - columnInterval * 2 + columnInterval * (i - 36), rowStart + rowInterval * 7, boxSize, boxSize);
+            }
+#elif defined FS_REEDS
+            int boxSize = 13;
+            int rowInterval = 80;
+            int rowStart = 20;
+            int columnInterval = 60;
+            if (i < 25) {
+                ofDrawEllipse(50 + i % 25 * 10, 350 - i % 5 * 50, boxSize, boxSize);
+            } else if (i < 50) {
+                ofDrawEllipse(400 + i % 25 * 10, 350 - i % 5 * 50, boxSize, boxSize);
+            } else if (i < 75) {
+                ofDrawEllipse(750 + i % 25 * 10, 350 - i % 5 * 50, boxSize, boxSize);
+            }
+#elif defined FS_WINDFLOWERS
+            int boxSize = 13;
+            int rowInterval = 80;
+            int rowStart = 20;
+            int columnInterval = 60;
+            int sphereScale = 30;
+            if (i < 50) {
+                int x = 200 + sin(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                int y = 200 + cos(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                ofDrawEllipse(x, y, boxSize, boxSize);
+            } else if (i < 100) {
+                int x = 400 + sin(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                int y = 600 + cos(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                ofDrawEllipse(x, y, boxSize, boxSize);
+            } else if (i < 150) {
+                int x = 600 + sin(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                int y = 200 + cos(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                ofDrawEllipse(x, y, boxSize, boxSize);
+            } else if (i < 200) {
+                int x = 800 + sin(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                int y = 600 + cos(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                ofDrawEllipse(x, y, boxSize, boxSize);
+            } else {
+                int x = 1000 + sin(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                int y = 200 + cos(2 * pi / 10 * (i % 10)) * sphereScale * (i % 50) / 10;
+                ofDrawEllipse(x, y, boxSize, boxSize);
+            }
+#else // Vest
             int boxSize = 40;
             float boxMult = 1.2;
             int x, y, increment = boxSize * boxMult;
@@ -387,7 +457,7 @@ void testApp::drawGPSdata() {
 void testApp::keyPressed(int key){
     
     uint8_t randomFlashData[] = {FS_ID_RANDOM_FLASH, 250, 200, 10, 130, 200};
-    uint8_t rainbowChaseData[] = {FS_ID_RAINBOW_CHASE, 120, 130, 100, 130, 240};
+    uint8_t rainbowChaseData[] = {FS_ID_RAINBOW_CHASE, 10, 130, 100, 130, 240};
     uint8_t organicData[] = {FS_ID_ORGANIC, 10, 0, 0, 0, 0};
     uint8_t descendData[] = {FS_ID_DESCEND, 100, 200, 10, 130, 250};
     uint8_t breatheData[] = {FS_ID_BREATHE, 100, 20, 10, 200, 150};
@@ -486,7 +556,7 @@ void testApp::keyPressed(int key){
             memcpy (data, flameData, 7);
             break;
         case 109: // m
-            memcpy (data, candleData, 7);
+            memcpy (data, rainbowChaseData, 7);
             break;
         default:
             done = true;
